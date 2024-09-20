@@ -7,12 +7,21 @@
 <link rel="stylesheet" href="css/style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<link href="/path/to/jquery.fancybox.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="css\jquery.fancybox.atuin.css">
-<script src="/path/to/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  $(document).ready(function() {
+    $('[data-fancybox="gallery"]').fancybox({
+      loop: true,
+      autoFocus: false,
+      arrows: true,
+      toolbar: "auto"
+    });
+  });
+</script>
 </head>
 
 <body>
@@ -20,7 +29,7 @@
     <source src="img/BETON_BG.mp4" type="video/mp4"></source>
 </video>
     <header>
-<h1 style="font-size: 100px;">FORMOPOR</h1>
+<h1>FORMOPOR</h1>
 <p class="head">Просто добавь в бетон!!!</p>
     </header>
 
@@ -51,13 +60,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="img/1.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 400px;">\\
+            <img src="img/1.jpg" class="d-block w-100" alt="..." style="width: 100%; height: auto;">\\
           </div>
           <div class="carousel-item">
-            <img src="img/2.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 400px;">
+            <img src="img/2.jpg" class="d-block w-100" alt="..." style="width: 100%; height: auto;">
           </div>
           <div class="carousel-item">
-            <img src="img/3.jpg" class="d-block w-100" alt="..." style="width:400px; height: 400px;">
+            <img src="img/3.jpg" class="d-block w-100" alt="..." style="width: 100%; height: auto;">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -125,7 +134,7 @@
     <h2>Галерея</h2>
     <div class="row">
         <div class="col" style="margin-bottom: 5em; border:10px white">
-            <a data-fancybox="gallery" href="gal/1.jpg">
+            <a data-fancybox="gallery" href="gal/1.1.jpg">
                 <img class="img-fluid" src="gal/1.jpg" alt="..." style="width: 300px; height: 200px;">
             </a>
         </div>
@@ -158,36 +167,36 @@
     </div>
   </div>
 </div>
-
 </section>
 <section>
-  <button class="back-to-top">Наверх</button>
+<button class="btn btn-primary back-to-top" type="submit">Наверх</button>
 
-  <script>
-    const backToTopButton = document.querySelector('.back-to-top');
+<script>
+  const backToTopButton = document.querySelector('.back-to-top');
 
-    // Появление кнопки при прокрутке вниз
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 100) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
+  // Появление кнопки при прокрутке вниз
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+
+  // Плавно прокручиваем к верху при нажатии на кнопку
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Плавно
     });
+  });
+</script>
 
-    // Плавно прокручиваем к верху при нажатии на кнопку
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Плавно
-      });
-    });
-  </script>
 </section>
     </main>
 
     <footer>
-      <h2>Контакты</h2>
+      <h2 style="margin-bottom: 2em;">Контакты</h2>
       <div class="row">
         <div class="col">
           <p>ООО "РусСтройХим"
@@ -203,9 +212,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/path/to/jquery.fancybox.min.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 body {
     text-align: center;
     background: url('BETON_BG.png');
@@ -5,53 +6,49 @@ body {
 }
 
 header {
-    margin-top: 10em;
-    margin-bottom: 5em;
+    margin-top: 5em; /* Уменьшили отступ для мобильных */
+    margin-bottom: 3em; /* Уменьшили отступ для мобильных */
 }
 
 h1 {
-    font-family: eb garamond,serif;
+    font-family: eb garamond, serif;
     color: blue;
     text-shadow: 1px 2px 2px black;
+    font-size: 100px !important; /* Уменьшили размер текста */
 }
 
-.head{
+.head {
     text-shadow: 0px 2px 2px white;
-    font-size: 25px;
-    font-family: eb garamond,serif;
+    font-size: 20px;
+    font-family: eb garamond, serif;
 }
 
 section {
-    margin-bottom: 4em;
-    color:black;
+    margin-bottom: 3em;
+    color: black;
 }
 
 footer {
-    color:black;
+    color: black;
+    margin-bottom: 5em;
 }
 
 h2 {
-    font-family: eb garamond,serif !important;
+    font-family: eb garamond, serif !important;
     text-shadow: 0px 1px 2px white;
-    font-size: 40px !important;
+    font-size: 35px !important; /* Уменьшили размер заголовка для мобильных */
 }
-
-@media screen and (max-width: 760px) {
-    p {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        }
-    }
 
 p {
-    margin-left: 15em;
-    margin-right: 15em;
-    font-size: 21px;
-    font-family: eb garamond,serif !important;
+    font-size: 22px; /* Уменьшили размер текста */
+    font-family: eb garamond, serif !important;
     text-shadow: 0px 1px 4px white;
+    text-align: center;
+    margin-right: 20em !important;
+    margin-left: 20em !important;
 }
 
-  .bgvideo {
+.bgvideo {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -60,30 +57,74 @@ p {
     width: auto;
     height: auto;
     z-index: -9999;
-  }
+}
 
 .img {
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
 }
 
 #carouselExampleIndicators {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
-/* .back-to-top {
-
-} */
-
-footer {
-    margin-bottom: 30em;
+.back-to-top {
+    display: block;
+    margin: 0 auto;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #000;
-  border-radius: 50%;
-  padding: .5rem;
+    background-color: #000;
+    border-radius: 50%;
+    padding: .5rem;
 }
+
+#carouselExampleIndicators {
+    width: 20%;
+    height: auto;
+}
+
+@media screen and (max-width: 760px) {
+    header {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+    }
+
+    h1 {
+        font-size: 35px !important;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 0 0.5em; /* Уменьшили отступы */
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .row, .col {
+        width: 100%;
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        margin-bottom: 3em;
+    }
+
+    #carouselExampleIndicators {
+        width: 60%;
+        height: auto;
+    }
+}
+
