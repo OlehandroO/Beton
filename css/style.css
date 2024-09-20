@@ -1,0 +1,89 @@
+body {
+    text-align: center;
+    background: url('BETON_BG.png');
+    background-size: cover;
+}
+
+header {
+    margin-top: 10em;
+    margin-bottom: 5em;
+}
+
+h1 {
+    font-family: eb garamond,serif;
+    color: blue;
+    text-shadow: 1px 2px 2px black;
+}
+
+.head{
+    text-shadow: 0px 2px 2px white;
+    font-size: 25px;
+    font-family: eb garamond,serif;
+}
+
+section {
+    margin-bottom: 4em;
+    color:black;
+}
+
+footer {
+    color:black;
+}
+
+h2 {
+    font-family: eb garamond,serif !important;
+    text-shadow: 0px 1px 2px white;
+    font-size: 40px !important;
+}
+
+@media screen and (max-width: 760px) {
+    p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        }
+    }
+
+p {
+    margin-left: 15em;
+    margin-right: 15em;
+    font-size: 21px;
+    font-family: eb garamond,serif !important;
+    text-shadow: 0px 1px 4px white;
+}
+
+  .bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+  }
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+#carouselExampleIndicators {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+/* .back-to-top {
+
+} */
+
+footer {
+    margin-bottom: 30em;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+  padding: .5rem;
+}
